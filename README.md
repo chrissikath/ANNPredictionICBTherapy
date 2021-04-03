@@ -2,7 +2,7 @@
 All scripts related to master thesis "Prediction on Immunotherapy Response in Melanoma Patients based on Machine Learning" by Christina Kuhn April 2021
 
 
-How to use:
+How to use: Mode "ann" = train model or "predict" = apply trained model to external data
 
 ANN binary
 ```
@@ -19,7 +19,7 @@ python3 Runnable_27_01_21.py ann # ann mode
 --grid __ann_n_neurons=3 __ann_num_hidden=1 __ann_learning_rate=0.01 __ann_l1_reg=0.0 
 __ann_l2_reg=0.0 __ann_dropout_rate=0.0 __ann_used_optimizer="adam","sgd" 
 -s 0 # 80/20 Split state (different numbers = different 80/20 Splits) 
--m # save the best ANN model
+-m # save the best ANN model 
 -u # use upsampling SMOTE-NC  
 -d "2-genes-and-all-clinicals" # extra name for output directory
 ```
