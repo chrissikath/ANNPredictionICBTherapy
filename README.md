@@ -6,7 +6,7 @@ How to use: Mode "ann" = train model or "predict" = apply trained model to exter
 
 ANN binary
 ```
-python3 Runnable_27_01_21.py ann # ann mode
+python3 ANNPredictionICBTherapy.py ann # ann mode
 -a ann # ann modus: basic ann worklow "ann" or ann with feature selection "fs_ann" 
 -i liu_MPEST_EYA1_20_01_21.csv # input table
 -o 'PFS'  # outcome feature name
@@ -26,7 +26,7 @@ __ann_l2_reg=0.0 __ann_dropout_rate=0.0 __ann_used_optimizer="adam","sgd"
 
 ANN mit Feature Selection
 ```
-python3 Runnable_27_12_2020.py # ann modus
+python3 ANNPredictionICBTherapy.py # ann modus
 -a fs_ann # ann modus: nur ann "ann" oder ann mit feature selection "fs_ann" 
 -i without_premed.csv # input tabelle, outcome positiion egal
 -o 'PFS' # benennung der outcome variable
@@ -42,7 +42,7 @@ __ann_regularization_rate=0.2,0.4,0.6 __ann_dropout_rate=0.2,0.4,0.6
 
 Predict Mode:
 ```
-python3 Runnable_29_01_2021.py predict #predict 
+python3 ANNPredictionICBTherapy.py predict #predict 
 -j ../results/05_01_21_14_10_ann_binary/split_random_seed_0/model.json # json format
 -w ../results/05_01_21_14_10_ann_binary/split_random_seed_0/model.h5 # h5 format 
 -b # if outcome is binary (default = continuously)
