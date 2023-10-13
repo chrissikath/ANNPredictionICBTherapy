@@ -1,7 +1,14 @@
 # ANNPredictionICBTherapy
 All scripts related to master thesis "Prediction on Immunotherapy Response in Melanoma Patients based on Machine Learning" by Christina Kuhn April 2021
 
+## Table of Contents
+- [Objective](#objectives)
+- [How to use](#howtouse)
 
+## Objectives
+
+
+## How to use
 How to use: Mode "ann" = train model or "predict" = apply trained model to external data
 
 ANN binary
