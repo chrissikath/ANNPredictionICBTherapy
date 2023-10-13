@@ -2,11 +2,11 @@
 All scripts related to master thesis "Prediction on Immunotherapy Response in Melanoma Patients based on Machine Learning" by Christina Kuhn April 2021
 
 ## Table of Contents
-- [Objective](#objectives)
+- [Abstract](#abstract)
 - [How to use](#howtouse)
 
-## Objectives
-
+## Abstract
+In recent years, immunotherapy with immune checkpoint blockade (ICB) has shown enormous success in the treatment of melanoma. However, reliably predicting a successful therapy while avoiding therapy options without benefit at baseline is still an unsolved issue. The aim of this master thesis is therefore to define statistical models that predict the success of immune checkpoint therapies in melanoma patient cohorts using neural networks. Since resistance to ICB is related to tumor environment and host immune factors, personalized models based on a patient's genomic setup could be decisive. However, complexity and high dimensionality resulting from the transcriptome data analysed here needs to be addressed with an automated machine learning algorithm. Models were based on Artificial Neural Networks (ANN) to predict the overall and progression free survival (OS and PFS, respectively) of melanoma patients undergoing anti-CTLA4 and anti-PD1/anti-PDL1 therapy. Measures of gene expression in Transcripts per Million (TPM) from bulk tumor RNA-sequencing data were used from five melanoma datasets. Clinical variables were included such as gender, age, and the type of therapy. The ANN was then optimised to achieve the highest possible accuracy in predicting the predefined survival outcome. Problems resulting from high-dimensional data, such as overfitting, were addressed using regularization and feature selection. As a result, the ANN-based model with feature selection was shown to have the ability to predict survival (PFS) to ICB therapy with up to 86% accuracy. ANN without feature selection, however with regularization, reached up to 72% accuracy for PFS and 71% for OS, respectively. To address the problem of small patient numbers and to test reproducibility, the model was trained and validated based on the combination of all five datasets. Since the combination did not lead to an improvement in prediction, follow-up studies are necessary, whereby the developed workflow can be used as a starting point for adaption to new datasets. In summary, the developed model may contribute to personalized therapy decisions in melanoma patients
 
 ## How to use
 How to use: Mode "ann" = train model or "predict" = apply trained model to external data
