@@ -3,10 +3,50 @@ All scripts related to master thesis "Prediction on Immunotherapy Response in Me
 
 ## Table of Contents
 - [Abstract](#abstract)
+- [Installation](#installation)
 - [How to use](#howtouse)
 
 ## Abstract
 In recent years, immunotherapy with immune checkpoint blockade (ICB) has shown enormous success in the treatment of melanoma. However, reliably predicting a successful therapy while avoiding therapy options without benefit at baseline is still an unsolved issue. The aim of this master thesis is therefore to define statistical models that predict the success of immune checkpoint therapies in melanoma patient cohorts using neural networks. Since resistance to ICB is related to tumor environment and host immune factors, personalized models based on a patient's genomic setup could be decisive. However, complexity and high dimensionality resulting from the transcriptome data analysed here needs to be addressed with an automated machine learning algorithm. Models were based on Artificial Neural Networks (ANN) to predict the overall and progression free survival (OS and PFS, respectively) of melanoma patients undergoing anti-CTLA4 and anti-PD1/anti-PDL1 therapy. Measures of gene expression in Transcripts per Million (TPM) from bulk tumor RNA-sequencing data were used from five melanoma datasets. Clinical variables were included such as gender, age, and the type of therapy. The ANN was then optimised to achieve the highest possible accuracy in predicting the predefined survival outcome. Problems resulting from high-dimensional data, such as overfitting, were addressed using regularization and feature selection. As a result, the ANN-based model with feature selection was shown to have the ability to predict survival (PFS) to ICB therapy with up to 86% accuracy. ANN without feature selection, however with regularization, reached up to 72% accuracy for PFS and 71% for OS, respectively. To address the problem of small patient numbers and to test reproducibility, the model was trained and validated based on the combination of all five datasets. Since the combination did not lead to an improvement in prediction, follow-up studies are necessary, whereby the developed workflow can be used as a starting point for adaption to new datasets. In summary, the developed model may contribute to personalized therapy decisions in melanoma patients
+
+## Installation
+### 1. Download Anaconda or Miniconda
+
+(with Python 3.7)
+Tested with conda version 4.10.3
+
+### 2. Create new environment with python 3.7
+
+```bash
+conda create --name ANN_environment python=3.7
+```
+
+### 3. Activate environment
+
+```bash
+conda activate ANN_environment
+``` 
+
+### 4. Pip install all required packages
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+tensorflow==2.3.1          # Development of ANN workflow
+keras==2.2.4               # Python interface for TensorFlow backend
+seaborn==0.10.0            # Drawing statistical graphics like confusion matrix
+scikit-learn==0.23.2       # Used for dimensionality reduction, model selection, pre-processing, and general machine learning workflow
+pandas==1.1.0              # Handling datasets
+imbalanced-learn==0.7.0    # Upsampling method SMOTE
+matplotlib==3.0.2          # Required for seaborn
+scipy==1.1.0               # Required for numerical and scientific calculations
+numpy==1.16.2              # Required for numerical and scientific calculations
+csv==1.0                   # Handling of CSV files
+argparse==1.1              # User-friendly command-line interface
+logging==0.5.1.2           # Creation of the log of the software process
+```
 
 ## How to use
 How to use: Mode "ann" = train model or "predict" = apply trained model to external data
